@@ -1,0 +1,27 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChitChat</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+{{ template "navbar" .}}
+
+<div class="container">
+    {{ template "content" .}}
+</div>
+
+{{/*{{ range $idx, $thread := .}}*/}}
+{{/*    <p>{{$idx}} - {{$thread}}</p>*/}}
+{{/*    */}}{{/*    <p>{{$idx}} - {{$thread.Name}}</p>*/}}
+{{/*{{ end }}*/}}
+
+<script src="/static/js/jquery-2.1.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{{ end }}
