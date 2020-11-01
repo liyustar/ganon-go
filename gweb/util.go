@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
-	"log"
 	"net/http"
 	"nuts/gweb/data"
 )
@@ -12,7 +11,7 @@ import (
 func Session(w http.ResponseWriter, r *http.Request) (sess data.Session, err error) {
 	cookie, err := r.Cookie("_cookie")
 	if err != nil {
-		log.Fatalln(err)
+		return
 	}
 
 	sess = data.Session{Uuid: cookie.Value}
